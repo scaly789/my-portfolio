@@ -254,7 +254,7 @@ li span {
 .pfp {
   width: 100%;
   height: auto;
-  margin-top: 20%;
+  margin-top: 40%;
 }
 
 .experience-header, .carousel-title {
@@ -291,7 +291,7 @@ li span {
 
 .nav {
   position: fixed;
-  margin-top: 35%;
+  margin-top: 40%;
   margin-right: 20vmin;
 }
 
@@ -580,14 +580,34 @@ a:active {
 
 .upper-container {
   display:flex;
-  margin-bottom: 12vmin;
+  margin-bottom: 6vmin;
   padding-top: 22vmin;
 }
 
 #about {
-  margin-bottom: 20vmin;
+  padding-top: 12vmin;
+  margin-bottom: 6vmin;
 }
 
 #experience {
-  margin-bottom: 12vmin;
+  padding-top: 8vmin;
+}
+
+#projects {
+  padding-top: 2vmin;
+}
+
+.nav-icons {
+  display: flex;
+  margin-top: 15%;
+  height: 3vmin;
+}
+
+.nav-icon {
+  height: 100%;
+  width: auto;
+}
+
+.icon-container {
+  margin-right: 10%;
 }

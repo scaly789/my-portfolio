@@ -40,6 +40,11 @@ class App extends Component {
             <div className='hover-container'><a href='#about'className='nav-link'><div className='nav-element'>About Me</div></a></div>
             <div className='hover-container'><a href='#experience' className='nav-link'><div className='nav-element'>Experience</div></a></div>
             <div className='hover-container'><a href='#projects' className='nav-link'><div className='nav-element'>Projects</div></a></div>
+            <div className='nav-icons'>
+              <div className='icon-container'><a href="https://github.com/scaly789"><img className="nav-icon" src="redgit.png"/></a></div>
+              <div className='icon-container'><a href="https://www.linkedin.com/in/eric-gan-cmu/"><img className="nav-icon" src="linked.png"/></a></div>
+              <div className='icon-container'><a href="mailto:2019egan@gmail.com"><img className="nav-icon" src="mail.png"/></a></div>
+            </div>
           </div>
         </div>
       </div>
