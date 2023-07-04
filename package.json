@@ -2,6 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://scaly789.github.io/my-portfolio",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/css": "^11.11.2",
