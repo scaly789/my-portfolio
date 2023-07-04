@@ -20,7 +20,7 @@ class App extends Component {
               <div className='contact-wrapper'>
                 <a href='mailto:2019egan@gmail.com'>
                   <div className='contact'>
-                    <img className='contact-img' src='mail.png'/>
+                    <img className='contact-img' src='mail.png' alt='mailicon'/>
                     <div className='contact-text'>Contact Me</div>
                   </div>
                 </a>
