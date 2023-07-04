@@ -1,3 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 40vmin;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  transition: background .4s ease-in;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 40vmin;
+  margin-bottom: 20px;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-5, #item-6:checked ~ .cards #song-4, #item-5:checked ~ .cards #song-3, #item-4:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-6 {
+  transform: translatex(-40%) scale(.6);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-6, #item-6:checked ~ .cards #song-5, #item-5:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-1 {
+  transform: translatex(-20%) scale(.8);
+  opacity: .8;
+  z-index: 1;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-4, #item-3:checked ~ .cards #song-5, #item-4:checked ~ .cards #song-6, #item-5:checked ~ .cards #song-1, #item-6:checked ~ .cards #song-2 {
+  transform: translatex(40%) scale(.6);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-5, #item-5:checked ~ .cards #song-6, #item-6:checked ~ .cards #song-1 {
+  transform: translatex(20%) scale(.8);
+  opacity: .8;
+  z-index: 1;
+}
+
+#item-1:checked ~ .cards #song-4, #item-2:checked ~ .cards #song-5, #item-3:checked ~ .cards #song-6, #item-4:checked ~ .cards #song-1, #item-5:checked ~ .cards #song-2, #item-6:checked ~ .cards #song-3 {
+  opacity: 0;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3, #item-4:checked ~ .cards #song-4, #item-5:checked ~ .cards #song-5, #item-6:checked ~ .cards #song-6 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+  
+  .carousel-img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+.player {
+  background-color: #404047;
+  border-radius: 8px;
+  width: 50%;
+  height: auto;
+  padding: 2% 2%;
+  color: #bdbdbf;
+}
+
+.contact {
+  background-color: #1A1A1D;
+  border-radius: 8px;
+  margin-top: 3vmin;
+  width: 30vmin;
+  height: 10vmin;
+  padding: 2% 2%;
+  color: #bdbdbf;
+  display: flex;
+  font-size: 2.5vmin;
+  justify-content: center;
+  gap:5%;
+  border-style: solid;
+  border-color: #c3073f;
+}
+
+.contact-wrapper {
+  width:30vmin;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +151,443 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.section-header {
+  font-size: 4.5vmin;
+  margin-top: 8vmin;
+  font-weight: bold;
+}
+
+.content, .section-content{
+  color: #bdbdbf;
+  line-height: 1.5;
+}
+
+.name {
+  font-size: 7vmin;
+  font-weight: bold;
+  width: max-content;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #950740; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 1.5s steps(60, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #950740; }
+}
+
+.highlight {
+  color: #c3073f;
+}
+
+.sub-name {
+  font-size: 4.5vmin;
+  color: #bdbdbf;
+  margin-top: 3vmin;
+}
+
+.header {
+  width: max-content;
+}
+
+.intro {
+  margin-top: 3vmin;
+  width: 64%;
+  font-size: 2.5vmin;
+}
+
+.about-wrapper {
+  display: flex;
+}
+
+.about-left {
+  margin-right: 7%;
+}
+
+.section-content, .experience-content, .carousel-content {
+  margin-top: 2vmin;
+  font-size: 2vmin;
+  font-family: 'Comfortaa';
+}
+
+.technologies {
+  margin-top: 2vmin;
+}
+
+.about-list {
+  width: 70%;
+  columns: 2 auto;
+}
+
+ul {
+  list-style-type: disclosure-closed;
+  
+}
+
+ul li {
+  padding: 1vmin 0;
+}
+
+li {
+  color: #950740;
+  /* Bullet Color */
+}
+
+li span {
+  color: #bdbdbf;
+  /* Text Color */
+}
+
+.pfp {
+  width: 100%;
+  height: auto;
+  margin-top: 20%;
+}
+
+.experience-header, .carousel-title {
+  font-size: 4vmin;
+  font-family: 'Comfortaa';
+}
+
+.carousel-title {
+  color: #c3073f;
+}
+
+.experience-dates {
+  margin-top: 2vmin;
+  font-family: 'Comfortaa';
+}
+
+.git {
+  width: 5%;
+  height: auto;
+  margin: auto 0 0 96%;
+}
+
+.web-container {
+  display: flex;
+}
+
+.web-left {
+  margin-right: 7%;
+}
+
+.web-right {
+  width: 15%;
+}
+
+.nav {
+  position: fixed;
+  margin-top: 35%;
+  margin-right: 20vmin;
+}
+
+.nav-element {
+  margin-top: 7%;
+  font-size: 2vmin;
+}
+
+.nav-link:link { 
+  text-decoration: none; 
+  color: #c3073f;
+}
+
+.nav-link:visited { 
+  text-decoration: none; 
+  color: #c3073f;
+}
+
+.nav-link:hover { 
+  text-decoration: none; 
+  color: #c3073f;
+  transform: translateX(-5vmin);
+}
+
+.nav-link:active { 
+  text-decoration: none; 
+  color: #c3073f;
+}
+
+.hover-container {
+  transition: transform 0.3s ease;
+}
+
+.hover-container:hover {
+  transform: translateX(-3vmin);
+}
+
+a:link { 
+  text-decoration: none; 
+}
+
+a:visited { 
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: none; 
+}
+
+a:active {
+  text-decoration: none; 
+}
+
+.contact-img {
+  height:70%;
+  width: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.contact-text {
+  margin-top: 9%;
+  color:#c3073f;
+}
+
+.sub-name #intro-1 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.12s;
+}
+.sub-name #intro-2 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.24s;
+}
+.sub-name #intro-3 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.36s;
+}
+.sub-name #intro-4 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.48s;
+}
+.sub-name #intro-5 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.6s;
+}
+.sub-name #intro-6 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.72s;
+}
+.sub-name #intro-7 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.84s;
+}
+.sub-name #intro-8 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 0.96s;
+}
+.sub-name #intro-9 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 1.08s;
+}
+.sub-name #intro-10 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 1.2s;
+}
+.sub-name #intro-11 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 1.32;
+}
+.sub-name #intro-12 {
+  position: relative;
+  display: inline-block;
+  animation: sub-name 1.44s infinite;
+  animation-delay: 1.44s;
+}
+@keyframes sub-name {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+.cf-container {
+  box-sizing: content-box;
+  width: 30vmin;
+  height: 30vmin;
+  position: relative;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+
+  .cf-flame-container {
+    width: 10vmin;
+    height: 10vmin;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .cf-log-container {
+    width: 60%;
+    height: 10vmin;
+    position: absolute;
+    bottom: 0;
+    left: 5vmin;
+  }
+
+  .cf-flame-container#base-fire {
+    .cf-flame:nth-child(1) {
+      background: #c63509;
+      opacity: 0.95;
+    }
+    .cf-flame:nth-child(2) {
+      background: #cd4015;
+      width: 15vmin;
+      height: 15vmin;
+      opacity: 0.85;
+      left: 10vmin;
+    }
+    .cf-flame:nth-child(3) {
+      background: #d73e0f;
+      width: 9vmin;
+      height: 9vmin;
+      opacity: 0.85;
+      left: 18vmin;
+    }
+  }
+
+  .cf-flame-container:nth-child(2) {
+    width: 22vmin;
+    height: 22vmin;
+    bottom: 0;
+    position: absolute;
+
+    .cf-flame {
+      width: 11vmin;
+      height: 11vmin;
+      left: 10vmin;
+    }
+  }
+}
+.cf-log {
+  background: #723830;
+  width: 30vmin;
+  height: 4vmin;
+  transform-origin: center;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 0.5em;
+  box-shadow: 0 0.3vmin 1vmin #372113;
+  &:nth-child(1) {
+    transform: rotate(15deg);
+  }
+  &:nth-child(2) {
+    transform: rotate(-15deg);
+  }
+}
+
+.cf-flame:nth-child(1) {
+  background: #f5ed8f;
+}
+.cf-flame:nth-child(2) {
+  background: #fde239;
+}
+.cf-flame:nth-child(3) {
+  background: #ffdc01;
+}
+.cf-flame:nth-child(4) {
+  background: #fdac01;
+}
+.cf-flame:nth-child(5) {
+  background: #d73e0f;
+}
+.cf-flame:nth-child(6) {
+  background: #cd4015;
+}
+.cf-flame:nth-child(7) {
+  background: #c63509;
+}
+.cf-flame:last-child {
+  background: #c63509;
+}
+.cf-flame {
+  background: #cd4015;
+  width: 15vmin;
+  height: 15vmin;
+  border-radius: 1em;
+  position: absolute;
+  bottom: 0;
+  left: 15vmin;
+}
+
+#fireNodes2 .cf-flame {
+  animation: flameColor 1.5s ease-out infinite;
+}
+
+@keyframes flameColor {
+  0% {
+    background: #c63509;
+  }
+  20% {
+    background: #cd4015;
+  }
+  30% {
+    background: #fdac01;
+  }
+  50% {
+    background: #ffb401;
+  }
+  60% {
+    background: #fdac01;
+  }
+  70% {
+    background: #ffdc01;
+  }
+  80% {
+    background: #fde239;
+  }
+  100% {
+    background: #f5ed8f;
+  }
+}
+
+.upper-container {
+  display:flex;
+  margin-bottom: 12vmin;
+  padding-top: 22vmin;
+}
+
+#about {
+  margin-bottom: 20vmin;
+}
+
+#experience {
+  margin-bottom: 12vmin;
 }
