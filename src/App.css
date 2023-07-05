@@ -98,12 +98,12 @@ input[type=radio] {
   background-color: #1A1A1D;
   border-radius: 8px;
   margin-top: 3vmin;
-  width: 30vmin;
-  height: 10vmin;
+  width: 20vmin;
+  height: 7vmin;
   padding: 2% 2%;
   color: #bdbdbf;
   display: flex;
-  font-size: 2.5vmin;
+  font-size: 2vmin;
   justify-content: center;
   gap:5%;
   border-style: solid;
@@ -111,7 +111,8 @@ input[type=radio] {
 }
 
 .contact-wrapper {
-  width:30vmin;
+  width:20vmin;
+  height: 7vmin;
 }
 
 .App {
